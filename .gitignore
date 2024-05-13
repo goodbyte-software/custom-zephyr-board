@@ -1,1 +1,7 @@
+# Zephyr
+.west
+zephyr
+modules
+
+# Build artifacts
 build
