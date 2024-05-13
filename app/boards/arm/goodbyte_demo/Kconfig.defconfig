@@ -1,0 +1,6 @@
+if BOARD_GOODBYTE_DEMO
+
+config BOARD
+    default "goodbyte demo"
+
+endif # BOARD_GOODBYTE_DEMO

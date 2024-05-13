@@ -1,0 +1,3 @@
+config BOARD_GOODBYTE_DEMO
+    bool "Goodbyte demo board"
+    depends on SOC_NRF52832_QFAA

@@ -1,0 +1,35 @@
+/dts-v1/;
+
+#include <nordic/nrf52832_qfaa.dtsi>
+
+/ {
+    model = "A goodbyte demo board";
+    compatible = "goodbyte,goodbyte-board";
+
+    chosen {
+        zephyr,sram = &sram0;
+        zephyr,flash = &flash0;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        led1_label: led_1 {
+            gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+            label = "LED 1";
+        };
+    };
+
+    aliases {
+        led1 = &led1_label;
+    };
+};
+
+
+&gpiote {
+    status = "okay";
+};
+
+&gpio0 {
+    status = "okay";
+};
+
